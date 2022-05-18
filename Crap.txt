@@ -1,0 +1,27 @@
+import random
+Roll_counter = 0
+temp = 0
+dtotal = 0
+print("How may rolls do you want: ")
+Rolls = int(input())
+print(f"The amount of rolls is: {Rolls}")
+
+def Roll_simulate():
+    d1 = (random.randrange(1,6))
+    d2 = (random.randrange(1,6))
+    dtotal = temp
+    dtotal = d1 + d2
+    
+    print(f"The total for all dice if: {dtotal}")
+    if d1 == d2:
+        print("doubles have rolled")
+        print(f"The number you have rolled is {d1}\n")
+    else:
+        print("You have not rolled doubles\n")
+    dtotal = d1 + d2 + temp
+    print(f"You have rolled a: {dtotal}")
+
+while Roll_counter < Rolls:
+    Roll_simulate()
+    Roll_counter += 1
+#print(f"Your total is: {dtotal}")
